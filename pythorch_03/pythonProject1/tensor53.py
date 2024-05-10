@@ -44,7 +44,7 @@ validation_dataload = DataLoader(validation_dataset, batch_size=4, shuffle=True,
 test_dataload = DataLoader(test_dataset, batch_size=4, shuffle=True, drop_last=True)
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-model = CustomModel()
+model = CustomModel().to(device)
 criterion = nn.BCELoss().to(device)
 optimizer = optim.SGD(model.parameters(), lr=0.001)
 
