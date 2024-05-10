@@ -38,7 +38,8 @@ class CustomModel(nn.Module):
         return x
 
 train_dataset = CustomDataset("../../../../dataset/pytorch_practice/datasets/perceptron.csv")
-train_dataloader = DataLoader(train_dataset, batch_size=64, shuffle=True, drop_last=True)
+train_dataloader = DataLoader(train_
+dataset, batch_size=64, shuffle=True, drop_last=True)
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model = CustomModel().to(device)
