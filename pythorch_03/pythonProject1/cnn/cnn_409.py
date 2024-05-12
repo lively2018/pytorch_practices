@@ -44,8 +44,8 @@ test_loader = DataLoader(test_data, batch_size=32, shuffle=True)
 
 lr = 1e-4
 optim = Adam(model.parameters(), lr=lr)
-
-for epoch in range(30):
+num_epochs = 30
+for epoch in range(num_epochs):
     iterator = tqdm.tqdm(train_loader)
     for data, label in iterator:
         optim.zero_grad()
